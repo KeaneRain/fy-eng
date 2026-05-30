@@ -4,7 +4,7 @@ import { CharSplit } from '../ui/CharSplit'
 
 export function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20 pb-12 px-8 md:px-12">
+    <section id="home" className="min-h-screen flex items-center pt-20 pb-12 px-10 md:px-14">
       <div className="max-w-lg">
         <motion.p
           initial={{ opacity: 0, y: 12 }}

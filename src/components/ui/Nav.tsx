@@ -4,7 +4,7 @@ import { NAV_LINKS } from '../../data/content'
 export function Nav() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-navy-950/80 border-b border-navy-800">
-      <nav className="px-6 h-16 flex items-center justify-between">
+      <nav className="px-6 md:px-10 h-16 flex items-center justify-between">
         <a href="#home" className="flex items-center gap-3 flex-shrink-0">
           <div className="w-9 h-9 border-2 border-blueprint-600 flex items-center justify-center">
             <span className="text-white font-heading text-sm font-bold">Fy</span>

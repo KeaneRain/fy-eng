@@ -17,10 +17,10 @@ export function Contact() {
 
   return (
     <section id="contact" ref={ref}>
-      <div className="bg-navy-950/40 border-t border-navy-800 py-16 px-8 md:px-12">
+      <div className="bg-navy-950/40 border-t border-navy-800 py-16 px-10 md:px-14">
         <div className="grid grid-cols-1 gap-10">
           <div>
-            <h3 className="text-3xl font-heading text-white uppercase mb-6 leading-tight">
+            <h3 className="text-2xl sm:text-3xl font-heading text-white uppercase mb-6 leading-tight">
               <WordReveal text="Let's Build Something" inView={inView} delay={0.1} /><br />
               <WordReveal text="Great Together." inView={inView} delay={0.38} />
             </h3>
@@ -63,7 +63,7 @@ export function Contact() {
         </div>
       </div>
 
-      <footer className="bg-navy-950/40 border-t border-navy-800 py-5 px-8 md:px-12">
+      <footer className="bg-navy-950/40 border-t border-navy-800 py-5 px-10 md:px-14">
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center gap-3">
             <div className="w-7 h-7 border border-blueprint-600 flex items-center justify-center">

@@ -10,7 +10,7 @@ export function Projects() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="projects" className="py-20 px-8 md:px-12" ref={ref}>
+    <section id="projects" className="py-20 px-10 md:px-14" ref={ref}>
       <motion.p
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : {}}
