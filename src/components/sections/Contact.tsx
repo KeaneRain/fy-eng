@@ -1,6 +1,7 @@
-import { useRef, type FormEvent } from 'react'
+import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { Button } from '../ui/Button'
+import { WordReveal } from '../ui/WordReveal'
 import { CONTACT } from '../../data/content'
 
 const inputClass = 'w-full bg-navy-800 border border-navy-700 text-white text-sm px-4 py-3 focus:outline-none focus:border-blueprint-600 placeholder:text-slate-600 font-body transition-colors'
@@ -9,7 +10,7 @@ export function Contact() {
   const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once: true, margin: '-60px' })
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = (e: { preventDefault(): void }) => {
     e.preventDefault()
     // Static form — no backend
   }
@@ -19,13 +20,10 @@ export function Contact() {
       <div className="bg-navy-950/40 border-t border-navy-800 py-16 px-8 md:px-12">
         <div className="grid grid-cols-1 gap-10">
           <div>
-            <motion.h3
-              initial={{ opacity: 0, y: 16 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              className="text-3xl font-heading text-white uppercase mb-6 leading-tight"
-            >
-              Let's Build Something<br />Great Together.
-            </motion.h3>
+            <h3 className="text-3xl font-heading text-white uppercase mb-6 leading-tight">
+              <WordReveal text="Let's Build Something" inView={inView} delay={0.1} /><br />
+              <WordReveal text="Great Together." inView={inView} delay={0.38} />
+            </h3>
             <motion.div
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}

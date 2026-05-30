@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import { WordReveal } from '../ui/WordReveal'
 import { STATS } from '../../data/content'
 
 export function About() {
@@ -16,15 +17,18 @@ export function About() {
         About Us
       </motion.p>
 
-      <motion.h2
-        initial={{ opacity: 0, y: 16 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ delay: 0.1 }}
-        className="text-4xl font-heading text-white uppercase mb-6 leading-tight"
-      >
-        Precision.<br />Passion.<br />Progress.
-        <span className="block w-10 h-0.5 bg-gold-500 mt-2" />
-      </motion.h2>
+      <h2 className="text-4xl font-heading text-white uppercase mb-6 leading-tight">
+        <WordReveal text="Precision." inView={inView} delay={0.15} /><br />
+        <WordReveal text="Passion." inView={inView} delay={0.28} /><br />
+        <WordReveal text="Progress." inView={inView} delay={0.41} />
+        <motion.span
+          initial={{ scaleX: 0 }}
+          animate={inView ? { scaleX: 1 } : { scaleX: 0 }}
+          transition={{ duration: 0.4, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="block w-10 h-0.5 bg-gold-500 mt-2"
+          style={{ transformOrigin: 'left' }}
+        />
+      </h2>
 
       <motion.p
         initial={{ opacity: 0 }}
