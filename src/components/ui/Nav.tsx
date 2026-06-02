@@ -28,7 +28,9 @@ export function Nav() {
           ))}
         </ul>
 
-        <Button href="#contact">Get a Quote</Button>
+        <div className="hidden md:block">
+          <Button href="#contact">Get a Quote</Button>
+        </div>
       </nav>
     </header>
   )
